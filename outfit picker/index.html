@@ -1,0 +1,80 @@
+<html>
+<head>
+<style>
+    img{height: 30vh;}
+    button{border-radius: 16px}
+</style>
+    <script>
+var topCounter = 0;
+var bottomCounter = 0; 
+var shirts = ["boys/Shirt5.jpg", "boys/shirt2.png", "boys/shirt3.png", "boys/shirt4.jpg"];        
+var pants = ["boys/pant1.jpg", "boys/pant2.jpg", "boys/pant3.jpg", "boys/pant4.jpg"];
+var shirtPrice = ["$22", "$26", "$19", "$27"]
+var pantPrice = ["$17","$14", "$18", "$12"]
+
+        
+        
+       
+        
+        
+        
+        function nextTop(){
+       topCounter = topCounter + 1;
+            if(topCounter === 4){topCounter = 0};
+    document.getElementById("top").src = shirts[topCounter];
+        document.getElementById("topPrice").innerHTML = shirtPrice[topCounter]; 
+        
+        }    
+
+        function nextBottom(){
+       bottomCounter = bottomCounter + 1;   
+             if(bottomCounter === 4){bottomCounter = 0};
+        document.getElementById("bottom").src = pants[bottomCounter];
+        
+    document.getElementById("bottomPrice").innerHTML = pantPrice[bottomCounter];
+        
+        }
+     
+        function getRandomIntInclusive(min, max) {
+         min = Math.ceil(min);
+         max = Math.floor(max);
+         return Math.floor(Math.random() * (max - min + 1)) + min;}; //The maximum is inclusive and the minimum is inclusive
+        
+         function randomize(){
+          var randomNumberTop = getRandomIntInclusive(0,3);   
+          var randomNumberBottom = getRandomIntInclusive(0,3);
+          document.getElementById("top").src = shirts[randomNumberTop];
+    
+        document.getElementById("topPrice").innerHTML = shirtPrice[randomNumberTop]; 
+         
+             document.getElementById("bottomPrice").innerHTML = pantPrice[randomNumberBottom];
+             
+             document.getElementById("bottom").src = pants[randomNumberBottom];   
+         }
+    </script>
+    </head>
+
+<body>
+<div id = "topPrice" >$22</div>
+<img id = "top"src = "boys/Shirt5.jpg">
+<button onClick = "nextTop()">next</button>
+ <br>   
+<div id = "bottomPrice">$17</div>
+    <img id = "bottom"src = "boys/pant1.jpg">
+<button onClick = "nextBottom()">next</button>    
+<br>
+<button onclick = "randomize()">Browse customizations</button>
+  <br>
+     <form method="get" action="portfolio.html">
+    <button type="submit">Home</button>
+</form>
+    
+    
+    
+    
+    </body>
+
+
+
+
+</html>

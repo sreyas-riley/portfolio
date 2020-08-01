@@ -1,0 +1,85 @@
+<!DOCTYPEhtml>
+<html>
+
+
+    <head>
+        <style>body{font-family: cursive;font-size: 20px}button{font-size: 17px;border-radius: 16px;text-align: center; background-color: #ddd; border: none;font-family: cursive}
+            button{border-radius: 16px}
+        </style>
+        <script>
+        
+        
+   function mad(){ 
+    var city = document.getElementById("city").value;
+    var ap = document.getElementById("ap").value;
+    var noun = document.getElementById("noun").value; 
+    var og = document.getElementById("og").value; 
+    var pronoun = document.getElementById("pronoun").value; 
+    var ptv = document.getElementById("ptv").value;
+    var ptv2 = document.getElementById("ptv2").value;
+    var profession = document.getElementById("profession").value;
+    var noun2 = document.getElementById("noun2").value;
+    var nof = document.getElementById("nof").value;
+    var place = document.getElementById("place").value;
+    var ig = document.getElementById("ig").value; 
+    var sentence = "Yesterday I played in " + city + " with my " + ap + ". First me and " + noun + " had a match of " + og + " where " + pronoun + " kept on claiming that he " + ptv + " with no visible proof. Later since we got bored we " + ptv2 + " to be pretend " + profession + " when " + noun2 + " came. Then " + nof + " went to " + place + " so we played " + ig + " until we went home.";           
+   document.getElementById("madlib").innerHTML= sentence;        
+   
+   
+   
+   
+   
+   
+   
+   }     
+</script>
+    </head>
+    
+    
+    
+    <body>
+<label>City</label>
+<input id = "city"/>
+<label>animal(plural)</label>
+<input id = "ap"/>        
+<label> noun</label>
+<input id = "noun"/>        
+<label> outdoor game</label>
+<input id = "og"/>
+<label><br> pronoun</label>
+<input id = "pronoun"/>        
+<label>past-tense verb</label>
+<input id = "ptv"/>         
+<label>past-tense verb</label>
+<input id = "ptv2"/>        
+<label>profession(plural)</label>
+<input id = "profession"/>        
+<label> noun</label>
+<input id = "noun2"/>        
+<label> Name of best friend</label>
+<input id = "nof"/>          
+<label>Place</label>
+<input id = "place"/>
+<label> indoor game</label>
+<input id = "ig"/>
+       <br> <button onClick= "mad()"; style="text-align: center"> Go Mad!</button>
+ <p id = "madlib"; style="font-size: 22px"> </p>   
+    </body>   
+
+     <form method="get" action="portfolio.html">
+    <button type="submit">Home</button>
+</form>
+    <br>
+    <form method="get" action="game.html">
+    <button type="submit"> mini-game</button>
+</form>
+    <br>
+    <form method="get" action="contact.html">
+    <button type="submit">Contact</button>
+</form>
+    <br>
+    <form method="get" action="index.html">
+    <button type="submit">outfit picker</button>
+</form>
+    
+</html>    
